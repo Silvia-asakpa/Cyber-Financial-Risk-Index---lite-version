@@ -1,0 +1,115 @@
+{
+  "summary": {
+    "utility": "Synthetic Mid-Size Municipal Utility",
+    "simulations": 20000,
+    "loss_capacity": 20000000,
+    "expected_loss": 1139410.7955394932,
+    "var95": 5876467.5114644915,
+    "es95": 7916564.663672193,
+    "loss_to_capacity": 0.39582823318360966,
+    "score": 47.11555656354094,
+    "tier": "Tier 3 - Elevated",
+    "scenario_expected_loss": {
+      "S1": 97542.48022632037,
+      "S2": 163655.59839947507,
+      "S3": 434431.83043562784,
+      "S4": 65491.62410825299,
+      "S5": 233210.84736254488,
+      "S6": 145078.41500727137
+    },
+    "scenario_tail_share": {
+      "S1": 0.15623155933093863,
+      "S2": 0.138360564341926,
+      "S3": 0.5562659873450522,
+      "S4": 0.015606898749338842,
+      "S5": 0.06990189650483164,
+      "S6": 0.06363309372791268
+    }
+  },
+  "portfolio": {
+    "budget": 400000.0,
+    "objective": "es95",
+    "method": "exhaustive",
+    "selected": [
+      "C1",
+      "C3",
+      "C4",
+      "C7",
+      "C8"
+    ],
+    "total_cost": 400000.0,
+    "expected_loss": 314278.19851688645,
+    "es95": 3058566.901704213,
+    "score": 21.817838358995566,
+    "baseline_expected_loss": 1139410.7955394932,
+    "baseline_es95": 7916564.663672193,
+    "baseline_score": 47.11555656354094,
+    "standalone": [
+      {
+        "id": "C7",
+        "name": "Phishing-resistant staff training",
+        "annual_cost": 25000.0,
+        "expected_loss_reduction": 178744.18822783127,
+        "es95_reduction": 428884.6990542663,
+        "roi": 6.149767529113251
+      },
+      {
+        "id": "C3",
+        "name": "Offline backups with tested restores",
+        "annual_cost": 120000.0,
+        "expected_loss_reduction": 249947.03489770927,
+        "es95_reduction": 1960764.4398411056,
+        "roi": 1.0828919574809106
+      },
+      {
+        "id": "C4",
+        "name": "Vendor bank-detail call-back verification",
+        "annual_cost": 15000.0,
+        "expected_loss_reduction": 158669.62517473812,
+        "es95_reduction": 235433.27009628713,
+        "roi": 9.577975011649208
+      },
+      {
+        "id": "C1",
+        "name": "Multi-factor authentication on remote access",
+        "annual_cost": 60000.0,
+        "expected_loss_reduction": 243674.67142030678,
+        "es95_reduction": 927688.7778055547,
+        "roi": 3.0612445236717796
+      },
+      {
+        "id": "C8",
+        "name": "Cyber insurance (net of deductible)",
+        "annual_cost": 180000.0,
+        "expected_loss_reduction": 398793.7784388226,
+        "es95_reduction": 2770797.632285267,
+        "roi": 1.2155209913267921
+      },
+      {
+        "id": "C5",
+        "name": "PLC setpoint limits and safety interlocks",
+        "annual_cost": 80000.0,
+        "expected_loss_reduction": 67201.09346197196,
+        "es95_reduction": 490433.66187875345,
+        "roi": -0.15998633172535046
+      },
+      {
+        "id": "C6",
+        "name": "24/7 security monitoring and response",
+        "annual_cost": 300000.0,
+        "expected_loss_reduction": 281536.2458360469,
+        "es95_reduction": 1691801.5153625961,
+        "roi": -0.06154584721317709
+      },
+      {
+        "id": "C2",
+        "name": "OT/IT network segmentation",
+        "annual_cost": 250000.0,
+        "expected_loss_reduction": 217679.45836915215,
+        "es95_reduction": 1337320.0177624375,
+        "roi": -0.1292821665233914
+      }
+    ]
+  },
+  "synthetic": true
+}

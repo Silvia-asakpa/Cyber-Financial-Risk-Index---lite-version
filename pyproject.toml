@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cfri-lite"
+version = "0.1.0"
+description = "Cyber-financial loss calculator and risk index for public water utilities (synthetic-data reference implementation)."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Silvia Tsovwen Asakpa" }]
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+charts = ["matplotlib>=3.7"]
+excel = ["openpyxl>=3.1"]
+dev = ["pytest>=7", "matplotlib>=3.7", "openpyxl>=3.1"]
+
+[project.scripts]
+cfri-lite = "cfri_lite.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

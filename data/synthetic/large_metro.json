@@ -1,0 +1,176 @@
+{
+  "name": "Synthetic Large Metropolitan Utility",
+  "reserves": 150000000,
+  "undrawn_liquidity": 100000000,
+  "scenarios": [
+    {
+      "id": "S1",
+      "name": "Chemical-dosing tampering",
+      "annual_probability": 0.022,
+      "loss_low": 2500000.0,
+      "loss_mode": 10000000.0,
+      "loss_high": 60000000.0,
+      "category": "operational",
+      "description": "Attacker changes treatment chemical setpoints; boil-water notice, response, liability."
+    },
+    {
+      "id": "S2",
+      "name": "Control-system disruption (forced manual operation)",
+      "annual_probability": 0.055,
+      "loss_low": 1500000.0,
+      "loss_mode": 7500000.0,
+      "loss_high": 40000000.0,
+      "category": "operational",
+      "description": "SCADA/PLC outage forces manual operation, overtime, contractors and lost output."
+    },
+    {
+      "id": "S3",
+      "name": "Ransomware on IT and billing systems",
+      "annual_probability": 0.11,
+      "loss_low": 2500000.0,
+      "loss_mode": 12500000.0,
+      "loss_high": 50000000.0,
+      "category": "it",
+      "description": "Billing and customer systems offline; delayed revenue, recovery and forensic costs."
+    },
+    {
+      "id": "S4",
+      "name": "Sensor and meter data spoofing",
+      "annual_probability": 0.044,
+      "loss_low": 1000000.0,
+      "loss_mode": 4000000.0,
+      "loss_high": 20000000.0,
+      "category": "operational",
+      "description": "Falsified telemetry or meter data causes misbilling, rework and regulatory reporting errors."
+    },
+    {
+      "id": "S5",
+      "name": "Vendor-payment diversion (business email compromise)",
+      "annual_probability": 0.132,
+      "loss_low": 500000.0,
+      "loss_mode": 3000000.0,
+      "loss_high": 25000000.0,
+      "category": "financial",
+      "description": "Fraudulent change of a vendor's bank details diverts large invoice payments."
+    },
+    {
+      "id": "S6",
+      "name": "Customer data breach",
+      "annual_probability": 0.066,
+      "loss_low": 1000000.0,
+      "loss_mode": 5000000.0,
+      "loss_high": 30000000.0,
+      "category": "it",
+      "description": "Exposure of customer payment and personal data; notification, monitoring, legal costs."
+    }
+  ],
+  "controls": [
+    {
+      "id": "C1",
+      "name": "Multi-factor authentication on remote access",
+      "annual_cost": 240000.0,
+      "probability_reduction": {
+        "S1": 0.4,
+        "S2": 0.5,
+        "S3": 0.3
+      },
+      "severity_reduction": {},
+      "description": "MFA for all vendor and staff remote access to OT and IT."
+    },
+    {
+      "id": "C2",
+      "name": "OT/IT network segmentation",
+      "annual_cost": 1000000.0,
+      "probability_reduction": {
+        "S1": 0.5,
+        "S2": 0.4,
+        "S4": 0.3
+      },
+      "severity_reduction": {
+        "S3": 0.2
+      },
+      "description": "Separate control networks from business networks; restrict traffic between them."
+    },
+    {
+      "id": "C3",
+      "name": "Offline backups with tested restores",
+      "annual_cost": 480000.0,
+      "probability_reduction": {},
+      "severity_reduction": {
+        "S2": 0.2,
+        "S3": 0.5
+      },
+      "description": "Immutable/offline backups for billing, finance and SCADA configurations."
+    },
+    {
+      "id": "C4",
+      "name": "Vendor bank-detail call-back verification",
+      "annual_cost": 60000.0,
+      "probability_reduction": {
+        "S5": 0.7
+      },
+      "severity_reduction": {},
+      "description": "Independent phone verification before any change to vendor payment details."
+    },
+    {
+      "id": "C5",
+      "name": "PLC setpoint limits and safety interlocks",
+      "annual_cost": 320000.0,
+      "probability_reduction": {
+        "S1": 0.2
+      },
+      "severity_reduction": {
+        "S1": 0.6
+      },
+      "description": "Hard limits on chemical dosing setpoints that software commands cannot override."
+    },
+    {
+      "id": "C6",
+      "name": "24/7 security monitoring and response",
+      "annual_cost": 1200000.0,
+      "probability_reduction": {
+        "S3": 0.25,
+        "S4": 0.3,
+        "S6": 0.3
+      },
+      "severity_reduction": {
+        "S1": 0.2,
+        "S2": 0.2,
+        "S3": 0.2
+      },
+      "description": "Managed detection and response covering IT and OT."
+    },
+    {
+      "id": "C7",
+      "name": "Phishing-resistant staff training",
+      "annual_cost": 100000.0,
+      "probability_reduction": {
+        "S3": 0.2,
+        "S5": 0.3,
+        "S6": 0.2
+      },
+      "severity_reduction": {},
+      "description": "Recurring training and simulated phishing for finance and operations staff."
+    },
+    {
+      "id": "C8",
+      "name": "Cyber insurance (net of deductible)",
+      "annual_cost": 720000.0,
+      "probability_reduction": {},
+      "severity_reduction": {
+        "S1": 0.35,
+        "S2": 0.35,
+        "S3": 0.35,
+        "S4": 0.35,
+        "S5": 0.35,
+        "S6": 0.35
+      },
+      "description": "Transfers part of the loss to an insurer; does not prevent attacks."
+    }
+  ],
+  "population_served": 1500000,
+  "annual_operating_budget": 450000000,
+  "horizon_years": 1,
+  "synthetic": true,
+  "notes": "SYNTHETIC - illustrative assumptions only, not data from any real utility. Large system; more exposure and a more attractive target, but deeper reserves."
+}

@@ -13,7 +13,8 @@ Add the chosen `LICENSE` file and update this notice before publishing.
 ## Relationship to the full CFRI system
 The full Cyber-Financial Risk Index (CFRI) system, which covers multi-stream data ingestion,
 machine-learning encoders, physics-based sensor verification, reliability-gated fusion and
-federated learning, is the subject of a patent application by the author. **It is not
+federated learning, is protected by a Nigerian utility model patent held by the author (Certificate
+No. 000181, date of patent September 28, 2026). **It is not
 included in this repository.** `cfri-lite` implements only the financial loss-simulation,
 scoring and control-ranking layer, using synthetic data.
 

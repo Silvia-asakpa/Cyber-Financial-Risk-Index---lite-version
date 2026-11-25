@@ -116,4 +116,4 @@ Silvia Tsovwen Asakpa, M.S. Applied Financial Economics (Saint Louis University)
 
 ## License
 
-**Not yet selected.** See [`NOTICE.md`](NOTICE.md). Until a license file is added, all rights are reserved.
+Open source under the [MIT License](LICENSE). See [`NOTICE.md`](NOTICE.md) for the scope of the license and the relationship to the patented full CFRI system.

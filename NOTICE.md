@@ -1,14 +1,12 @@
 # Notice
 
-## License: not yet selected
-No open-source license has been applied yet, so **all rights are reserved** for now.
-Before this repository is made public, the author should choose a license with advice
-from a patent attorney. The choice affects patent rights:
+## License
+`cfri-lite` is open-source software released under the [MIT License](LICENSE).
+Anyone may use, copy, modify and redistribute it, including for commercial use,
+provided the copyright notice and license text are kept.
 
-- **Apache-2.0** includes an express patent license from contributors to users.
-- **MIT** is shorter and does not include an express patent grant.
-
-Add the chosen `LICENSE` file and update this notice before publishing.
+The MIT License covers only the code and documents in this repository. It grants no
+rights under the patent described below.
 
 ## Relationship to the full CFRI system
 The full Cyber-Financial Risk Index (CFRI) system, which covers multi-stream data ingestion,

@@ -6,6 +6,8 @@ authors:
   - family-names: Asakpa
     given-names: Silvia Tsovwen
 type: software
+license: MIT
+repository-code: "https://github.com/Silvia-asakpa/Cyber-Financial-Risk-Index---lite-version"
 keywords:
   - cyber risk
   - water utilities

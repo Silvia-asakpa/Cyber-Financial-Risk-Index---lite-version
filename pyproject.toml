@@ -5,6 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "cfri-lite"
 version = "0.1.0"
+license = { text = "MIT" }
 description = "Cyber-financial loss calculator and risk index for public water utilities (synthetic-data reference implementation)."
 readme = "README.md"
 requires-python = ">=3.10"
